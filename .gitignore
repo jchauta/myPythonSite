@@ -48,3 +48,4 @@ Temporary Items
 
 #Python .pyc Files
 .pyc
+*.pyc

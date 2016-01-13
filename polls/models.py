@@ -4,6 +4,16 @@ from django.utils import timezone
 
 # Create your models here.
 
+class User(models.Model):
+	name = models.CharField(max_length=50)
+	username = models.CharField(max_length=50)
+	age = models.IntegerField(default=0)
+	gender = models.CharField(max_length=1)
+
+	def __str__(self):
+		return self.name
+
+
 class Question(models.Model):
 	question_text = models.CharField(max_length=200)
 	pub_date = models.DateTimeField('date published')

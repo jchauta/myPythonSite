@@ -9,9 +9,11 @@ from .models import Question
 def index(request):
 	latest_question_list = Question.objects.order_by('-pub_date')[:5]
 	template = loader.get_template('polls/index.html')
+	username = "PLACEHOLDER"
 	context = {
 		'latest_question_list':latest_question_list,
-	}
+		'username' : username,
+		}
 	return HttpResponse(template.render(context,request))
 
 def juanpage(request):
